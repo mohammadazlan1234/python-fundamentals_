@@ -1,0 +1,345 @@
+{
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Pyolite",
+      "language": "python",
+      "name": "python"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "python",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8"
+    }
+  },
+  "nbformat_minor": 5,
+  "nbformat": 4,
+  "cells": [
+    {
+      "cell_type": "code",
+      "source": "# design an alien game",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": [],
+      "id": "cad4a1de-d330-4fad-8a33-d3401abe541c"
+    },
+    {
+      "cell_type": "code",
+      "source": "alien = ('color':'green','points':5)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 2,
+      "outputs": [],
+      "id": "eb70a7bb-f8df-4700-b723-d89bc3442e6e"
+    },
+    {
+      "cell_type": "code",
+      "source": "print(alien)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "{'color': 'green', 'points': 5}\n",
+          "output_type": "stream"
+        }
+      ],
+      "id": "b28fe2d0-77b7-4b0a-9be4-335c8722bdd8"
+    },
+    {
+      "cell_type": "code",
+      "source": "type(alien)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "execution_count": 5,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "dict"
+          },
+          "metadata": {}
+        }
+      ],
+      "id": "52f2b2ef-6e9f-4d39-80b3-3960130056cf"
+    },
+    {
+      "cell_type": "code",
+      "source": "# how to access the elements in the dict...?",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": [],
+      "id": "a24de3df-a543-48a1-8afb-ec1990101379"
+    },
+    {
+      "cell_type": "code",
+      "source": "print(alien['color'])",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "green\n",
+          "output_type": "stream"
+        }
+      ],
+      "id": "a6f45af0-20d8-45f5-97c0-e2fd8474795c"
+    },
+    {
+      "cell_type": "code",
+      "source": "print(alien['points'])",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "5\n",
+          "output_type": "stream"
+        }
+      ],
+      "id": "ee045182-003f-44fc-bc5d-d495d6350d5e"
+    },
+    {
+      "cell_type": "code",
+      "source": "#opposite",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": [],
+      "id": "cd4ea57c-dc32-4adb-9c54-701b7c46cf26"
+    },
+    {
+      "cell_type": "code",
+      "source": "print(alien['green'])",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "ename": "<class 'KeyError'>",
+          "evalue": "'green'",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mKeyError\u001b[0m                                  Traceback (most recent call last)",
+            "Input \u001b[0;32mIn [9]\u001b[0m, in \u001b[0;36m<cell line: 1>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[43malien\u001b[49m\u001b[43m[\u001b[49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[38;5;124;43mgreen\u001b[39;49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[43m]\u001b[49m)\n",
+            "\u001b[0;31mKeyError\u001b[0m: 'green'"
+          ],
+          "output_type": "error"
+        }
+      ],
+      "id": "3f36cb7b-7364-4066-80fd-7034808067a2"
+    },
+    {
+      "cell_type": "code",
+      "source": "# how to add new key value pairs to the dictionary.",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": [],
+      "id": "ed61390f-4dda-4c24-b640-26b92d82a065"
+    },
+    {
+      "cell_type": "code",
+      "source": "# req: i want to add start position.....? 0",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": [],
+      "id": "95cc22c9-3bd6-47a3-ae23-22841057c439"
+    },
+    {
+      "cell_type": "code",
+      "source": "alien('start_position') = 0",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": [],
+      "id": "1880d99f-69eb-42ea-8057-a5fc093e3f8f"
+    },
+    {
+      "cell_type": "code",
+      "source": "print(alien)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "{'color': 'green', 'points': 5}\n",
+          "output_type": "stream"
+        }
+      ],
+      "id": "fe5bd685-a8ea-4571-808b-5f4f85058fa2"
+    },
+    {
+      "cell_type": "code",
+      "source": "",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": [],
+      "id": "4c5d8cf9-19be-4b06-bbba-b1d9ef2c2181"
+    },
+    {
+      "cell_type": "code",
+      "source": "useraccount = {'username':'codetrainingacademy','first name':'code','last name':'training'}",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 13,
+      "outputs": [],
+      "id": "a7275870-de36-4e1e-8257-ec059f5a2e87"
+    },
+    {
+      "cell_type": "code",
+      "source": "print(useraccount)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "{'username': 'codetrainingacademy', 'first name': 'code', 'last name': 'training'}\n",
+          "output_type": "stream"
+        }
+      ],
+      "id": "54cdb581-70c6-465e-b6c9-087e91a2c506"
+    },
+    {
+      "cell_type": "code",
+      "source": "type(useraccount)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "execution_count": 15,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "dict"
+          },
+          "metadata": {}
+        }
+      ],
+      "id": "44785876-32ac-448c-ae54-faa5a3634fcf"
+    },
+    {
+      "cell_type": "code",
+      "source": "useraccount['dinner']='farzi_cafe'",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": [],
+      "id": "a6a9b949-b973-4ea9-a74b-f4ff03ffbc9f"
+    },
+    {
+      "cell_type": "code",
+      "source": "print(useraccount)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "{'username': 'codetrainingacademy', 'first name': 'code', 'last name': 'training'}\n",
+          "output_type": "stream"
+        }
+      ],
+      "id": "29039b63-4f85-4480-ba63-fda07d5139f0"
+    },
+    {
+      "cell_type": "code",
+      "source": "",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": [],
+      "id": "4a121143-8ad6-4e81-972f-c923323f1435"
+    },
+    {
+      "cell_type": "code",
+      "source": "print(alien)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "{'color': 'green', 'points': 5}\n",
+          "output_type": "stream"
+        }
+      ],
+      "id": "8adfdabb-94a1-47fb-b9df-5f7ee1c5cd64"
+    },
+    {
+      "cell_type": "code",
+      "source": "alien['color']='yellow'",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": [],
+      "id": "a6fd0a39-2fd7-4d2d-8fc0-3463a4d31e66"
+    },
+    {
+      "cell_type": "code",
+      "source": "print(alien)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "{'color': 'green', 'points': 5}\n",
+          "output_type": "stream"
+        }
+      ],
+      "id": "8c8f0972-3f84-4a57-b2a7-0eb3644c9c5c"
+    },
+    {
+      "cell_type": "code",
+      "source": "delalien['points']",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": [],
+      "id": "2d692f2a-5158-4105-be09-52056373e9d1"
+    },
+    {
+      "cell_type": "code",
+      "source": "",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": [],
+      "id": "35801e8c-71ef-43b8-955d-9526e458f058"
+    },
+    {
+      "cell_type": "code",
+      "source": "",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": [],
+      "id": "443d4e92-ccf8-4ae6-96bc-594defaceadb"
+    },
+    {
+      "cell_type": "code",
+      "source": "",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": [],
+      "id": "6acb2b59-972f-487d-bbb5-a445d2c32ce8"
+    }
+  ]
+}
